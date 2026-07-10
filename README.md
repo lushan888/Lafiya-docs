@@ -4,7 +4,7 @@
 [![Soroban Smart Contracts](https://img.shields.io/badge/Smart%20Contracts-Soroban-purple)](https://soroban.stellar.org)
 [![Status: Pre-alpha](https://img.shields.io/badge/Status-Pre--alpha-orange)](#status)
 [![Network: Testnet](https://img.shields.io/badge/Network-Testnet-lightgrey)](#status)
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-informational)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-informational)](LICENSE)
 
 **Your vitals, verified. When you can't speak, Lafiya does.**
 
@@ -200,7 +200,7 @@ Lafiya is built as an open-source **Digital Public Good** (SDG 3, Good Health an
 
 ## License
 
-This repository is licensed under **Apache-2.0** — see [LICENSE](LICENSE). Apache-2.0 is recommended organization-wide (OSI-approved, includes a patent grant — required for Digital Public Good status).
+This repository is licensed under **MIT** — see [LICENSE](LICENSE). MIT matches the license already used by [`lafiya-web`](https://github.com/lafiya-xyz/lafiya-web) and [`lafiya-contract`](https://github.com/lafiya-xyz/lafiya-contract) (OSI-approved, satisfies the Digital Public Goods Standard's open-licensing requirement).
 
 ## Contributing
 

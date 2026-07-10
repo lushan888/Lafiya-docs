@@ -20,7 +20,7 @@ Positioning notes for the application:
 | DPG Standard requirement | Status |
 | --- | --- |
 | Relevance to SDGs | Met — SDG 3, Good Health and Well-being |
-| Open licensing | Done in this repo — Apache-2.0 (see [LICENSE](../LICENSE)); planned for `lafiya-web` and `lafiya-contract` once they exist |
+| Open licensing | Done — MIT across all three active repos (`lafiya-docs`, `lafiya-web`, `lafiya-contract`); see [LICENSE](../LICENSE) |
 | Clear ownership | Held under the `lafiya-xyz` GitHub organization |
 | Platform independence | Met by design — no proprietary lock-in; Next.js, Postgres, Soroban are all portable |
 | Documentation | This repo |

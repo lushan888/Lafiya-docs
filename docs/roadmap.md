@@ -14,7 +14,7 @@ or contract code exists. Status: **done**, entirely within this repo.
 - [x] Architecture Decision Records for the Stellar/Soroban trust model, the
       `lafiya-web` stack, and CHW incentives (see [adr/](adr/README.md))
 - [x] Contributor infrastructure: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`,
-      `SECURITY.md`, `LICENSE` (Apache-2.0), issue/PR templates, and
+      `SECURITY.md`, `LICENSE` (MIT), issue/PR templates, and
       markdown-lint CI
 - [x] `lafiya-web` and `lafiya-contract` repos scaffolded and under active
       development

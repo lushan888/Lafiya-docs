@@ -49,6 +49,9 @@ All notable changes to this repository are documented here. Format follows
   README and `docs/roadmap.md`
 - "Shared Contracts" heading and its anchor shortened now that the sibling
   repos actually exist (dropped the "once they exist" qualifier)
+- `LICENSE` switched from Apache-2.0 to **MIT**, matching the license already
+  used by `lafiya-web` and `lafiya-contract`; updated the license badge,
+  README's License section, and the DPG licensing checklist to match
 
 ### Removed
 
