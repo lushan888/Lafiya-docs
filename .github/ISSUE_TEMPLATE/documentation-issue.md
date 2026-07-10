@@ -5,10 +5,10 @@ title: "[Docs] "
 labels: documentation
 ---
 
-**Which document?**
+### Which document?
 
 (e.g. `docs/data-model.md`, `docs/threat-model.md`, `README.md`)
 
-**What's wrong or missing?**
+### What's wrong or missing?
 
-**Suggested fix (optional)**
+### Suggested fix (optional)

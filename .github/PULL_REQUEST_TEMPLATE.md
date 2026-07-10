@@ -1,7 +1,5 @@
 ## Summary
 
-
-
 ## Type of change
 
 - [ ] Documentation fix/clarification
