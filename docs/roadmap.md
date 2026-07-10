@@ -5,10 +5,25 @@ This expands the milestone list in the
 not a sprint — M(n+1) does not start in earnest until M(n) has a working
 demo.
 
+## Phase 0 — Documentation foundation
+
+**Goal:** every design decision M0 depends on is written down before any app
+or contract code exists. Status: **done**, entirely within this repo.
+
+- [x] Concept note, data model, threat model, and privacy design specified
+- [x] Architecture Decision Records for the Stellar/Soroban trust model, the
+      `lafiya-web` stack, and CHW incentives (see [adr/](adr/README.md))
+- [x] Contributor infrastructure: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`,
+      `SECURITY.md`, `LICENSE` (Apache-2.0), issue/PR templates, and
+      markdown-lint CI
+- [ ] `lafiya-web` and `lafiya-contracts` repos scaffolded — not started;
+      this is what M0 below actually requires next
+
 ## M0 — Public card (testnet)
 
 **Goal:** one patient can create a profile and expose a working read-only
-emergency page via QR.
+emergency page via QR. **Status: not started** — blocked on scaffolding
+`lafiya-web`.
 
 - Patient signup/login (`lafiya-web`)
 - Profile editor covering the full [data model](data-model.md)

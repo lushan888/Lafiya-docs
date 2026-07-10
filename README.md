@@ -171,7 +171,8 @@ npm run dev
 
 See [docs/roadmap.md](docs/roadmap.md) for what "done" means at each milestone.
 
-- **M0 — Public card (testnet).** One patient can create a profile and expose a working read-only emergency page via QR.
+- **Phase 0 — Documentation foundation.** Done — concept note, data model, threat model, privacy design, ADRs, and contributor infra all live in this repo.
+- **M0 — Public card (testnet).** *Not started* — blocked on scaffolding `lafiya-web`. One patient can create a profile and expose a working read-only emergency page via QR.
 - **M1 — Attestation.** Soroban registry lets an allowlisted attester verify a record; the card shows a verified indicator.
 - **M2 — Incentives.** USDC-on-Stellar payout to a CHW per verified registration.
 - **M3 — Pilot.** Small supervised field pilot; measure verified cards created and scan events.
