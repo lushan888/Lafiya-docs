@@ -8,7 +8,7 @@
 ## `lafiya-web` API (sketch)
 
 | Method | Path | Auth | Purpose |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `POST` | `/api/profile` | Patient session | Create/update the full profile |
 | `GET` | `/api/profile/me` | Patient session | Read own full profile |
 | `PATCH` | `/api/profile/me/visibility` | Patient session | Toggle per-field public visibility |

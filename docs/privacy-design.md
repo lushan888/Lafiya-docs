@@ -16,7 +16,7 @@ The Nigeria Data Protection Act (2023) governs all personal data Lafiya
 holds. Key obligations and how the design meets them:
 
 | NDPA principle | Lafiya's design response |
-|---|---|
+| --- | --- |
 | Lawful basis / consent | Explicit, granular, per-field opt-in for the public page; withdrawable at any time |
 | Purpose limitation | Emergency subset exists solely for emergency treatment context; no secondary use (marketing, resale) |
 | Data minimization | Public page schema is deliberately the smallest set of fields that change emergency treatment |

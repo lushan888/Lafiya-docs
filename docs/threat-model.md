@@ -16,7 +16,7 @@
 ## Actors
 
 | Actor | Trust level | Can do |
-|---|---|---|
+| --- | --- | --- |
 | Patient / guardian | Owns their own data | Edit their profile, choose what's public, revoke consent |
 | Health worker (attester) | Allowlisted, semi-trusted | Attest to a record's accuracy on-chain |
 | Responder | Untrusted, anonymous | Read the public emergency page only |
@@ -37,7 +37,7 @@
 ## STRIDE analysis (selected)
 
 | Threat | Example | Mitigation |
-|---|---|---|
+| --- | --- | --- |
 | **Spoofing** | Attacker impersonates a health worker to submit a false attestation | Attester allowlist enforced on-chain; attester identity is a Stellar keypair, not a password |
 | **Tampering** | Attacker edits the emergency subset after attestation | Any edit invalidates the hash; the public page shows "unverified" until re-attested |
 | **Repudiation** | Attester denies having verified a record | On-chain attestation is a public, timestamped, non-repudiable record |

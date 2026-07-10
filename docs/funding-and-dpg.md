@@ -18,7 +18,7 @@ Positioning notes for the application:
 ## Digital Public Goods Standard checklist
 
 | DPG Standard requirement | Status |
-|---|---|
+| --- | --- |
 | Relevance to SDGs | Met — SDG 3, Good Health and Well-being |
 | Open licensing | Planned — Apache-2.0 across all repos (see [LICENSE](../LICENSE)) |
 | Clear ownership | Held under the `lafiya-xyz` GitHub organization |

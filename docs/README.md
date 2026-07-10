@@ -3,7 +3,7 @@
 This directory is the single source of truth for Lafiya's design. Start here.
 
 | Doc | What it covers |
-|---|---|
+| --- | --- |
 | [concept-note.md](concept-note.md) | The problem, the solution, and the theory of change |
 | [data-model.md](data-model.md) | Emergency subset, full profile, and attestation record schemas |
 | [threat-model.md](threat-model.md) | Assets, actors, trust boundaries, STRIDE analysis, mitigations |
