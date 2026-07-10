@@ -268,7 +268,7 @@ Lafiya is an information aid, **not a medical device** and **not a substitute fo
 
 These works directly informed Lafiya's design and are the intended reading for contributors.
 
-**Books**
+### Books
 
 - Shortliffe, E. H., & Cimino, J. J. (Eds.). (2021). *Biomedical Informatics: Computer Applications in Health Care and Biomedicine* (5th ed.). Springer. — Grounds the clinical data model: which fields are decision-relevant in an emergency, and how health records are structured and coded.
 - Preukschat, A., & Reed, D. (2021). *Self-Sovereign Identity: Decentralized Digital Identity and Verifiable Credentials*. Manning. — The blueprint for Lafiya Proof: issuer/holder/verifier roles, verifiable credentials, hash-based attestation, key management, and offline verification.
@@ -276,7 +276,7 @@ These works directly informed Lafiya's design and are the intended reading for c
 - Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O'Reilly. — Informs the off-chain data layer: reliable and secure storage, encryption, and the boundary between what lives in the database and what is anchored on-chain.
 - Martin, R. C. (2017). *Clean Architecture: A Craftsman's Guide to Software Structure and Design*. Prentice Hall. — Discipline for an AI-assisted codebase: clear boundaries so the app, the contracts, and the data layer stay independently maintainable.
 
-**Standards & documentation**
+### Standards & documentation
 
 - Stellar Development Foundation — Stellar and Soroban developer documentation.
 - W3C — Verifiable Credentials Data Model.
