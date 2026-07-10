@@ -208,13 +208,21 @@ This project lives under the `lafiya-xyz` GitHub organization. If a change here 
 
 | Repo | Purpose | Priority |
 |------|---------|----------|
-| `lafiya-web` | Patient + responder web app (Next.js). Public emergency page, authed profile editor, QR generation. | **Build first** |
-| `lafiya-contracts` | Soroban smart contracts (Rust): attestation registry + attester allowlist. Testnet first. | **Build next** |
-| `lafiya-docs` _(this repo)_ | Concept note, data model, threat model, privacy design, funding/DPG materials, references. | Start now (lightweight) |
-| `.github` | Organization profile README and contribution guidelines. | Start now |
+| [`lafiya-web`](https://github.com/lafiya-xyz/lafiya-web) | Patient + responder web app (Next.js). Public emergency page, authed profile editor, QR generation. | **Build first** |
+| [`lafiya-contracts`](https://github.com/lafiya-xyz/lafiya-contracts) | Soroban smart contracts (Rust): attestation registry + attester allowlist. Testnet first. | **Build next** |
+| [`lafiya-docs`](https://github.com/lafiya-xyz/lafiya-docs) _(this repo)_ | Concept note, data model, threat model, privacy design, funding/DPG materials, references. | Start now (lightweight) |
+| [`.github`](https://github.com/lafiya-xyz/.github) | Organization profile README and contribution guidelines. | Start now |
 | `lafiya-verifier` | CHW verification tool. Begins as a route inside `lafiya-web`; split out only if it grows. | Later |
 
 > Resist scaffolding empty repos. Two working repos (`lafiya-web`, `lafiya-contracts`) beat five half-built ones. Build one honest milestone at a time.
+
+### Where to Start (per repo)
+
+- **`lafiya-web`** — not yet scaffolded. When it exists, start at its own README, then read this repo's [Data Model](#data-model-emergency-subset) and [docs/api-surface-sketch.md](docs/api-surface-sketch.md) before writing profile or public-page code.
+- **`lafiya-contracts`** — not yet scaffolded. Start at the [attestation record shape](#shared-contracts-must-stay-in-sync-across-repos-once-they-exist) below, the [Soroban interface sketch](docs/api-surface-sketch.md#lafiya-contracts-soroban-interface-sketch), and [docs/adr/](docs/adr/README.md) for why the trust model looks the way it does.
+- **`lafiya-docs`** (this repo) — start at [docs/README.md](docs/README.md); it's the source of truth every other repo builds against.
+- **`.github`** — org-wide templates and the org profile README; not yet scaffolded.
+- **`lafiya-verifier`** — no separate repo yet; CHW verification currently lives as a planned route inside `lafiya-web` (see [Core Components](#core-components)).
 
 ### Data Flow
 
@@ -249,6 +257,8 @@ lafiya-docs ──(data model, threat model, privacy design)──▶  lafiya-we
 - Treat this section as the source of truth for **cross-repo** contracts. Each repo's own README covers repo-local conventions once it exists.
 - This repo currently contains **documentation only** — do not assume application or contract code lives here.
 - No personal health data, secrets, or private keys belong in this repo, ever — only specs, models, and public materials.
+- If a change in one repo touches a shared contract above, say so explicitly and open a matching issue in the affected repo(s) — don't let the repos drift silently out of sync.
+- Don't invent URLs, contact details, or people. If a fact isn't confirmed, leave a clearly marked placeholder instead of a fabricated one.
 
 ## Disclaimer
 
