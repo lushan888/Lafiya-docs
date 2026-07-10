@@ -16,14 +16,16 @@ or contract code exists. Status: **done**, entirely within this repo.
 - [x] Contributor infrastructure: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`,
       `SECURITY.md`, `LICENSE` (Apache-2.0), issue/PR templates, and
       markdown-lint CI
-- [ ] `lafiya-web` and `lafiya-contract` repos scaffolded — not started;
-      this is what M0 below actually requires next
+- [x] `lafiya-web` and `lafiya-contract` repos scaffolded and under active
+      development
 
 ## M0 — Public card (testnet)
 
 **Goal:** one patient can create a profile and expose a working read-only
-emergency page via QR. **Status: not started** — blocked on scaffolding
-`lafiya-web`.
+emergency page via QR. **Status: in progress** — `lafiya-web` has
+authenticated and public route groups, an API layer, and a Supabase
+integration; `lafiya-contract` has separate attestation-registry and
+attester-registry crates. Not yet verified end-to-end.
 
 - Patient signup/login (`lafiya-web`)
 - Profile editor covering the full [data model](data-model.md)

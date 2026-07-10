@@ -3,7 +3,7 @@
 This is the source of truth for every field Lafiya stores, where it lives,
 and who can see it. `lafiya-web`'s database schema and `lafiya-contract`'s
 on-chain structs must match this document — see the root README's
-[Shared Contracts](../README.md#shared-contracts-must-stay-in-sync-across-repos-once-they-exist)
+[Shared Contracts](../README.md#shared-contracts-must-stay-in-sync-across-repos)
 section.
 
 ## Emergency subset (public, QR-reachable)

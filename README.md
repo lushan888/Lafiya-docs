@@ -78,10 +78,10 @@ graph TB
 
 ### Core Components
 
-- **`lafiya-web`** *(planned)*: Next.js app hosting both the authenticated profile editor and the public emergency page + QR generation
-- **`lafiya-contract`** *(planned)*: Soroban smart contracts — attestation registry and attester allowlist, Rust, Testnet first
+- **`lafiya-web`** *(in progress)*: Next.js app hosting both the authenticated profile editor and the public emergency page + QR generation
+- **`lafiya-contract`** *(in progress)*: Soroban smart contracts — attestation registry and attester allowlist, Rust, Testnet first
 - **`lafiya-docs`** *(this repo)*: concept note, data model, threat model, privacy design, and funding/DPG materials that the other repos are built against
-- **`lafiya-verifier`** *(later)*: CHW verification tool; starts as a route inside `lafiya-web` and only splits out if it grows
+- **`lafiya-verifier`** *(reserved, not started)*: CHW verification tool; starts as a route inside `lafiya-web` and only splits out if it grows
 
 ## Attestation & Trust Model
 
@@ -157,7 +157,7 @@ See [SECURITY.md](SECURITY.md) to report a security or privacy concern about the
 
 ## Getting Started
 
-*Pre-alpha; instructions land with M0.* This repo is documentation-only — there is nothing to install or run here. Once `lafiya-web` exists, it will be cloned and run like this:
+*Pre-alpha.* This repo (`lafiya-docs`) is documentation-only — there is nothing to install or run here. To run the product itself, clone `lafiya-web`:
 
 ```bash
 git clone https://github.com/lafiya-xyz/lafiya-web
@@ -172,7 +172,7 @@ npm run dev
 See [docs/roadmap.md](docs/roadmap.md) for what "done" means at each milestone.
 
 - **Phase 0 — Documentation foundation.** Done — concept note, data model, threat model, privacy design, ADRs, and contributor infra all live in this repo.
-- **M0 — Public card (testnet).** *Not started* — blocked on scaffolding `lafiya-web`. One patient can create a profile and expose a working read-only emergency page via QR.
+- **M0 — Public card (testnet).** *In progress* — `lafiya-web` (profile, public emergency page, QR) and `lafiya-contract` (attestation + attester registries) are both scaffolded and under active development. One patient will be able to create a profile and expose a working read-only emergency page via QR.
 - **M1 — Attestation.** Soroban registry lets an allowlisted attester verify a record; the card shows a verified indicator.
 - **M2 — Incentives.** USDC-on-Stellar payout to a CHW per verified registration.
 - **M3 — Pilot.** Small supervised field pilot; measure verified cards created and scan events.
@@ -212,21 +212,21 @@ This project lives under the `lafiya-xyz` GitHub organization. If a change here 
 
 | Repo | Purpose | Priority |
 | --- | --- | --- |
-| [`lafiya-web`](https://github.com/lafiya-xyz/lafiya-web) | Patient + responder web app (Next.js). Public emergency page, authed profile editor, QR generation. | **Build first** |
-| [`lafiya-contract`](https://github.com/lafiya-xyz/lafiya-contract) | Soroban smart contracts (Rust): attestation registry + attester allowlist. Testnet first. | **Build next** |
-| [`lafiya-docs`](https://github.com/lafiya-xyz/lafiya-docs) *(this repo)* | Concept note, data model, threat model, privacy design, funding/DPG materials, references. | Start now (lightweight) |
-| [`.github`](https://github.com/lafiya-xyz/.github) | Organization profile README and contribution guidelines. | Start now |
-| `lafiya-verifier` | CHW verification tool. Begins as a route inside `lafiya-web`; split out only if it grows. | Later |
+| [`lafiya-web`](https://github.com/lafiya-xyz/lafiya-web) | Patient + responder web app (Next.js). Public emergency page, authed profile editor, QR generation. | **In progress** |
+| [`lafiya-contract`](https://github.com/lafiya-xyz/lafiya-contract) | Soroban smart contracts (Rust): attestation registry + attester allowlist. Testnet first. | **In progress** |
+| [`lafiya-docs`](https://github.com/lafiya-xyz/lafiya-docs) *(this repo)* | Concept note, data model, threat model, privacy design, funding/DPG materials, references. | Ongoing (lightweight) |
+| [`.github`](https://github.com/lafiya-xyz/.github) | Organization profile README and contribution guidelines. | Reserved — placeholder README only |
+| [`lafiya-verifier`](https://github.com/lafiya-xyz/lafiya-verifier) | CHW verification tool. Begins as a route inside `lafiya-web`; split out only if it grows. | Reserved — placeholder README only |
 
-> Resist scaffolding empty repos. Two working repos (`lafiya-web`, `lafiya-contract`) beat five half-built ones. Build one honest milestone at a time.
+> All five repos now exist. `lafiya-web` and `lafiya-contract` are where the real work happens; `.github` and `lafiya-verifier` are intentionally left as reserved placeholders (a one-line README, nothing else) until there's an actual reason to fill them in. Resist scaffolding a placeholder into real code before that reason shows up.
 
 ### Where to Start (per repo)
 
-- **`lafiya-web`** — not yet scaffolded. When it exists, start at its own README, then read this repo's [Data Model](#data-model-emergency-subset) and [docs/api-surface-sketch.md](docs/api-surface-sketch.md) before writing profile or public-page code.
-- **`lafiya-contract`** — not yet scaffolded. Start at the [attestation record shape](#shared-contracts-must-stay-in-sync-across-repos-once-they-exist) below, the [Soroban interface sketch](docs/api-surface-sketch.md#lafiya-contract-soroban-interface-sketch), and [docs/adr/](docs/adr/README.md) for why the trust model looks the way it does.
+- **`lafiya-web`** — start at its own README, then read this repo's [Data Model](#data-model-emergency-subset) and [docs/api-surface-sketch.md](docs/api-surface-sketch.md) before touching profile or public-page code. Already has authenticated and public route groups, an API layer, and a Supabase integration.
+- **`lafiya-contract`** — start at the [attestation record shape](#shared-contracts-must-stay-in-sync-across-repos) below, the [Soroban interface sketch](docs/api-surface-sketch.md#lafiya-contract-soroban-interface-sketch), and [docs/adr/](docs/adr/README.md) for why the trust model looks the way it does. Already has separate attestation-registry and attester-registry crates.
 - **`lafiya-docs`** (this repo) — start at [docs/README.md](docs/README.md); it's the source of truth every other repo builds against.
-- **`.github`** — org-wide templates and the org profile README; not yet scaffolded.
-- **`lafiya-verifier`** — no separate repo yet; CHW verification currently lives as a planned route inside `lafiya-web` (see [Core Components](#core-components)).
+- **`.github`** — reserved placeholder repo (a one-line README only); org-wide templates and CODEOWNERS haven't been added there yet.
+- **`lafiya-verifier`** — reserved placeholder repo (a one-line README only); CHW verification still lives as a route inside `lafiya-web` (see [Core Components](#core-components)) until there's a reason to split it out.
 
 ### Data Flow
 
@@ -250,11 +250,11 @@ lafiya-docs ──(data model, threat model, privacy design)──▶  lafiya-we
 4. The public emergency page reflects the verified flag once the attestation lands.
 5. Verified registrations trigger a USDC-on-Stellar payout to the CHW from the transparent funding pool.
 
-### Shared Contracts (must stay in sync across repos, once they exist)
+### Shared Contracts (must stay in sync across repos)
 
 - **Emergency data model** — the field list under [Data Model](#data-model-emergency-subset) above is the source of truth; `lafiya-web`'s profile schema must mirror it field-for-field.
-- **Attestation record shape** — hash of record + attester identity + timestamp; to be formally specified in this repo before `lafiya-contract` implements the Soroban struct.
-- **Environment/config keys** — none exist yet; the first will be Supabase and Stellar testnet keys needed by `lafiya-web` (see [Getting Started](#getting-started)).
+- **Attestation record shape** — hash of record + attester identity + timestamp; `lafiya-contract`'s attestation-registry crate must match this shape — check for drift whenever either side changes.
+- **Environment/config keys** — Supabase and Stellar testnet keys, defined in `lafiya-web`'s `.env.example` (see [Getting Started](#getting-started)).
 
 ### Conventions for AI Agents
 

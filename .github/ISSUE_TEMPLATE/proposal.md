@@ -12,7 +12,7 @@ labels: proposal
 ## Does this touch a shared contract?
 
 (emergency data model, attestation schema, env/config keys — see the root
-README's [Shared Contracts](../../README.md#shared-contracts-must-stay-in-sync-across-repos-once-they-exist) section)
+README's [Shared Contracts](../../README.md#shared-contracts-must-stay-in-sync-across-repos) section)
 
 - [ ] Yes — matching repo(s) that need a follow-up issue:
 - [ ] No

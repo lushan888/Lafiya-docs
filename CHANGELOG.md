@@ -34,6 +34,21 @@ All notable changes to this repository are documented here. Format follows
   cleanly
 - `docs/funding-and-dpg.md`'s DPG licensing checklist row, which still said
   "planned" after `LICENSE` was added to this repo
+- Sibling repo name corrected everywhere: the real Soroban contracts repo is
+  `lafiya-contract` (singular), not `lafiya-contracts` — the old name 404'd
+
+### Changed
+
+- `lafiya-web` and `lafiya-contract` marked **in progress** (real code now
+  exists: route groups + API + Supabase in `lafiya-web`; attestation-registry
+  and attester-registry crates in `lafiya-contract`), and `.github` /
+  `lafiya-verifier` marked as **reserved placeholders** (repo exists, README
+  only) — Core Components, the org table, "Where to Start", Getting Started,
+  and the roadmap all updated to match
+- Roadmap's M0 status moved from "not started" to "in progress" in both the
+  README and `docs/roadmap.md`
+- "Shared Contracts" heading and its anchor shortened now that the sibling
+  repos actually exist (dropped the "once they exist" qualifier)
 
 ### Removed
 
