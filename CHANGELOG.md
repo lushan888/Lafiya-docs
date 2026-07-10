@@ -21,3 +21,21 @@ All notable changes to this repository are documented here. Format follows
 - README restructured to a professional, org-wide format covering overview,
   architecture, trust model, repository structure, roadmap, and cross-repo
   conventions
+- README's Lafiya Organization section gained a linked repo table, a
+  "Where to Start (per repo)" guide, and expanded AI-agent conventions
+- License badge; Roadmap section now links to `docs/roadmap.md` instead of
+  duplicating it silently; Tech Stack choices link to their ADRs
+
+### Fixed
+
+- Markdown lint findings across the repo (table style, missing fenced-code
+  languages, inconsistent emphasis markers, bold text used as headings, a
+  bare URL, and stray blank lines) — CI's markdown-lint workflow now passes
+  cleanly
+- `docs/funding-and-dpg.md`'s DPG licensing checklist row, which still said
+  "planned" after `LICENSE` was added to this repo
+
+### Removed
+
+- `AI.md` — its cross-repo map was folded into README's Lafiya Organization
+  section instead of living as a separate file
