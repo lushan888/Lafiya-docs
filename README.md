@@ -4,6 +4,7 @@
 [![Soroban Smart Contracts](https://img.shields.io/badge/Smart%20Contracts-Soroban-purple)](https://soroban.stellar.org)
 [![Status: Pre-alpha](https://img.shields.io/badge/Status-Pre--alpha-orange)](#status)
 [![Network: Testnet](https://img.shields.io/badge/Network-Testnet-lightgrey)](#status)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-informational)](LICENSE)
 
 **Your vitals, verified. When you can't speak, Lafiya does.**
 
@@ -168,6 +169,8 @@ npm run dev
 
 ## Roadmap
 
+See [docs/roadmap.md](docs/roadmap.md) for what "done" means at each milestone.
+
 - **M0 — Public card (testnet).** One patient can create a profile and expose a working read-only emergency page via QR.
 - **M1 — Attestation.** Soroban registry lets an allowlisted attester verify a record; the card shows a verified indicator.
 - **M2 — Incentives.** USDC-on-Stellar payout to a CHW per verified registration.
@@ -189,9 +192,9 @@ Lafiya is built as an open-source **Digital Public Good** (SDG 3, Good Health an
 
 ## Tech Stack
 
-- **Frontend / app:** Next.js, deployed on Vercel
-- **Data & auth:** Supabase (Postgres, Row-Level Security, encryption at rest)
-- **On-chain:** Soroban smart contracts (Rust) on Stellar; USDC on Stellar for payments
+- **Frontend / app:** Next.js, deployed on Vercel — see [ADR 0004](docs/adr/0004-nextjs-supabase-stack.md)
+- **Data & auth:** Supabase (Postgres, Row-Level Security, encryption at rest) — see [ADR 0004](docs/adr/0004-nextjs-supabase-stack.md)
+- **On-chain:** Soroban smart contracts (Rust) on Stellar; USDC on Stellar for payments — see [ADR 0001](docs/adr/0001-why-stellar.md) and [ADR 0005](docs/adr/0005-usdc-for-chw-incentives.md)
 - **Standards:** W3C Verifiable Credentials data model; HL7 FHIR for health-data field structure
 
 ## License
