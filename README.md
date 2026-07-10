@@ -77,10 +77,10 @@ graph TB
 
 ### Core Components
 
-- **`lafiya-web`** _(planned)_: Next.js app hosting both the authenticated profile editor and the public emergency page + QR generation
-- **`lafiya-contracts`** _(planned)_: Soroban smart contracts — attestation registry and attester allowlist, Rust, Testnet first
-- **`lafiya-docs`** _(this repo)_: concept note, data model, threat model, privacy design, and funding/DPG materials that the other repos are built against
-- **`lafiya-verifier`** _(later)_: CHW verification tool; starts as a route inside `lafiya-web` and only splits out if it grows
+- **`lafiya-web`** *(planned)*: Next.js app hosting both the authenticated profile editor and the public emergency page + QR generation
+- **`lafiya-contracts`** *(planned)*: Soroban smart contracts — attestation registry and attester allowlist, Rust, Testnet first
+- **`lafiya-docs`** *(this repo)*: concept note, data model, threat model, privacy design, and funding/DPG materials that the other repos are built against
+- **`lafiya-verifier`** *(later)*: CHW verification tool; starts as a route inside `lafiya-web` and only splits out if it grows
 
 ## Attestation & Trust Model
 
@@ -210,7 +210,7 @@ This project lives under the `lafiya-xyz` GitHub organization. If a change here 
 | --- | --- | --- |
 | [`lafiya-web`](https://github.com/lafiya-xyz/lafiya-web) | Patient + responder web app (Next.js). Public emergency page, authed profile editor, QR generation. | **Build first** |
 | [`lafiya-contracts`](https://github.com/lafiya-xyz/lafiya-contracts) | Soroban smart contracts (Rust): attestation registry + attester allowlist. Testnet first. | **Build next** |
-| [`lafiya-docs`](https://github.com/lafiya-xyz/lafiya-docs) _(this repo)_ | Concept note, data model, threat model, privacy design, funding/DPG materials, references. | Start now (lightweight) |
+| [`lafiya-docs`](https://github.com/lafiya-xyz/lafiya-docs) *(this repo)* | Concept note, data model, threat model, privacy design, funding/DPG materials, references. | Start now (lightweight) |
 | [`.github`](https://github.com/lafiya-xyz/.github) | Organization profile README and contribution guidelines. | Start now |
 | `lafiya-verifier` | CHW verification tool. Begins as a route inside `lafiya-web`; split out only if it grows. | Later |
 
@@ -290,6 +290,6 @@ These works directly informed Lafiya's design and are the intended reading for c
 
 **Lafiya** — Your vitals, verified.
 
-_Built for the Stellar ecosystem. Open source. Community owned._
+*Built for the Stellar ecosystem. Open source. Community owned.*
 
 </div>
