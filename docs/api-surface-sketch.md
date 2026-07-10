@@ -1,7 +1,7 @@
 # API & Contract Surface Sketch (forward-looking)
 
 > This is a design sketch, not an implementation. Nothing described here
-> exists in code yet — it exists so `lafiya-web` and `lafiya-contracts` are
+> exists in code yet — it exists so `lafiya-web` and `lafiya-contract` are
 > built against a shared plan instead of diverging. Update this doc, don't
 > silently deviate from it, if the real implementation differs.
 
@@ -16,7 +16,7 @@
 | `POST` | `/api/attestations` | Attester session | Submit an attestation for a record hash |
 | `GET` | `/api/attestations/{public_id}` | None | Check current attestation status for a record |
 
-## `lafiya-contracts` Soroban interface (sketch)
+## `lafiya-contract` Soroban interface (sketch)
 
 ```rust
 pub fn attest(env: Env, attester: Address, record_hash: BytesN<32>) -> u64; // returns ledger timestamp

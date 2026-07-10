@@ -16,7 +16,7 @@ or contract code exists. Status: **done**, entirely within this repo.
 - [x] Contributor infrastructure: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`,
       `SECURITY.md`, `LICENSE` (Apache-2.0), issue/PR templates, and
       markdown-lint CI
-- [ ] `lafiya-web` and `lafiya-contracts` repos scaffolded — not started;
+- [ ] `lafiya-web` and `lafiya-contract` repos scaffolded — not started;
       this is what M0 below actually requires next
 
 ## M0 — Public card (testnet)
@@ -36,7 +36,7 @@ emergency page via QR. **Status: not started** — blocked on scaffolding
 **Goal:** an allowlisted attester can verify a record; the card shows a
 verified indicator.
 
-- Soroban attestation registry contract (`lafiya-contracts`), Testnet
+- Soroban attestation registry contract (`lafiya-contract`), Testnet
 - Attester allowlist (governance-managed)
 - `lafiya-web` submits the record hash on attestation and checks it on page
   load
@@ -61,6 +61,6 @@ verified indicator.
 
 **Goal:** launch on mainnet; open a transparent funding pool.
 
-- Mainnet deployment of `lafiya-contracts`
+- Mainnet deployment of `lafiya-contract`
 - Public, on-chain-traceable funding pool for CHW incentives
 - DPG Standard registration (see [funding-and-dpg.md](funding-and-dpg.md))

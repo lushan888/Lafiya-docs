@@ -10,10 +10,10 @@
   appear in the public emergency page response)
 - Integration tests for the public emergency page against the full
   [data model](data-model.md)
-- Contract tests against `lafiya-contracts`'s testnet deployment for the
+- Contract tests against `lafiya-contract`'s testnet deployment for the
   attestation flow
 
-## `lafiya-contracts`
+## `lafiya-contract`
 
 - Unit tests for `attest`, `get_attestation`, `add_attester`,
   `remove_attester`
@@ -25,7 +25,7 @@
 ## Cross-repo
 
 - A shared fixture set (patient records + expected hashes) so `lafiya-web`
-  and `lafiya-contracts` tests exercise the same data model, kept here in
+  and `lafiya-contract` tests exercise the same data model, kept here in
   `lafiya-docs` once fixtures are formalized.
 - Any test asserting privacy behavior (private field never leaks) is treated
   as security-critical and should block merges on failure, not just warn.

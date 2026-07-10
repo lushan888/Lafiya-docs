@@ -11,7 +11,7 @@ for where application and contract code live.
 For anything beyond a typo or broken link, please open an issue first using
 the **Proposal** template. This is especially important for changes to the
 [data model](docs/data-model.md) or [attestation record schema](docs/data-model.md#attestation-record-on-chain-soroban) —
-these are shared contracts with `lafiya-web` and `lafiya-contracts`, and
+these are shared contracts with `lafiya-web` and `lafiya-contract`, and
 changing them here without warning breaks other repos silently.
 
 ## Making the change

@@ -79,7 +79,7 @@ graph TB
 ### Core Components
 
 - **`lafiya-web`** *(planned)*: Next.js app hosting both the authenticated profile editor and the public emergency page + QR generation
-- **`lafiya-contracts`** *(planned)*: Soroban smart contracts — attestation registry and attester allowlist, Rust, Testnet first
+- **`lafiya-contract`** *(planned)*: Soroban smart contracts — attestation registry and attester allowlist, Rust, Testnet first
 - **`lafiya-docs`** *(this repo)*: concept note, data model, threat model, privacy design, and funding/DPG materials that the other repos are built against
 - **`lafiya-verifier`** *(later)*: CHW verification tool; starts as a route inside `lafiya-web` and only splits out if it grows
 
@@ -213,17 +213,17 @@ This project lives under the `lafiya-xyz` GitHub organization. If a change here 
 | Repo | Purpose | Priority |
 | --- | --- | --- |
 | [`lafiya-web`](https://github.com/lafiya-xyz/lafiya-web) | Patient + responder web app (Next.js). Public emergency page, authed profile editor, QR generation. | **Build first** |
-| [`lafiya-contracts`](https://github.com/lafiya-xyz/lafiya-contracts) | Soroban smart contracts (Rust): attestation registry + attester allowlist. Testnet first. | **Build next** |
+| [`lafiya-contract`](https://github.com/lafiya-xyz/lafiya-contract) | Soroban smart contracts (Rust): attestation registry + attester allowlist. Testnet first. | **Build next** |
 | [`lafiya-docs`](https://github.com/lafiya-xyz/lafiya-docs) *(this repo)* | Concept note, data model, threat model, privacy design, funding/DPG materials, references. | Start now (lightweight) |
 | [`.github`](https://github.com/lafiya-xyz/.github) | Organization profile README and contribution guidelines. | Start now |
 | `lafiya-verifier` | CHW verification tool. Begins as a route inside `lafiya-web`; split out only if it grows. | Later |
 
-> Resist scaffolding empty repos. Two working repos (`lafiya-web`, `lafiya-contracts`) beat five half-built ones. Build one honest milestone at a time.
+> Resist scaffolding empty repos. Two working repos (`lafiya-web`, `lafiya-contract`) beat five half-built ones. Build one honest milestone at a time.
 
 ### Where to Start (per repo)
 
 - **`lafiya-web`** — not yet scaffolded. When it exists, start at its own README, then read this repo's [Data Model](#data-model-emergency-subset) and [docs/api-surface-sketch.md](docs/api-surface-sketch.md) before writing profile or public-page code.
-- **`lafiya-contracts`** — not yet scaffolded. Start at the [attestation record shape](#shared-contracts-must-stay-in-sync-across-repos-once-they-exist) below, the [Soroban interface sketch](docs/api-surface-sketch.md#lafiya-contracts-soroban-interface-sketch), and [docs/adr/](docs/adr/README.md) for why the trust model looks the way it does.
+- **`lafiya-contract`** — not yet scaffolded. Start at the [attestation record shape](#shared-contracts-must-stay-in-sync-across-repos-once-they-exist) below, the [Soroban interface sketch](docs/api-surface-sketch.md#lafiya-contract-soroban-interface-sketch), and [docs/adr/](docs/adr/README.md) for why the trust model looks the way it does.
 - **`lafiya-docs`** (this repo) — start at [docs/README.md](docs/README.md); it's the source of truth every other repo builds against.
 - **`.github`** — org-wide templates and the org profile README; not yet scaffolded.
 - **`lafiya-verifier`** — no separate repo yet; CHW verification currently lives as a planned route inside `lafiya-web` (see [Core Components](#core-components)).
@@ -235,7 +235,7 @@ lafiya-docs ──(data model, threat model, privacy design)──▶  lafiya-we
                                                                   │
                                                      patient profile + QR
                                                                   │
-                            lafiya-contracts (Soroban) ◀── attestation hash ── CHW verifies record
+                            lafiya-contract (Soroban) ◀── attestation hash ── CHW verifies record
                                      │
                                      ▼
                           verified flag on public page
@@ -246,14 +246,14 @@ lafiya-docs ──(data model, threat model, privacy design)──▶  lafiya-we
 
 1. **`lafiya-docs`** (this repo) defines the emergency data model, threat model, and privacy design that the other repos build against.
 2. **`lafiya-web`** implements the patient profile, the public emergency page, and QR generation, following the data model above.
-3. A CHW verifies a record; **`lafiya-contracts`** records the attestation on Soroban (hash + attester identity + timestamp only).
+3. A CHW verifies a record; **`lafiya-contract`** records the attestation on Soroban (hash + attester identity + timestamp only).
 4. The public emergency page reflects the verified flag once the attestation lands.
 5. Verified registrations trigger a USDC-on-Stellar payout to the CHW from the transparent funding pool.
 
 ### Shared Contracts (must stay in sync across repos, once they exist)
 
 - **Emergency data model** — the field list under [Data Model](#data-model-emergency-subset) above is the source of truth; `lafiya-web`'s profile schema must mirror it field-for-field.
-- **Attestation record shape** — hash of record + attester identity + timestamp; to be formally specified in this repo before `lafiya-contracts` implements the Soroban struct.
+- **Attestation record shape** — hash of record + attester identity + timestamp; to be formally specified in this repo before `lafiya-contract` implements the Soroban struct.
 - **Environment/config keys** — none exist yet; the first will be Supabase and Stellar testnet keys needed by `lafiya-web` (see [Getting Started](#getting-started)).
 
 ### Conventions for AI Agents

@@ -51,7 +51,7 @@
   to attest to false data is not detected by the cryptography — this is a
   governance and dispute-resolution problem, not a technical one. See the
   root README's [Attestation & Trust Model](../README.md#attestation--trust-model)
-  notes and the equivalent process to be built in `lafiya-contracts`.
+  notes and the equivalent process to be built in `lafiya-contract`.
 - **Lost patient credentials**: account recovery is a standard web-auth
   problem; until `lafiya-web` exists this is tracked as an open design
   question here.

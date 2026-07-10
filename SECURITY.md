@@ -25,7 +25,7 @@ sensitive detail is public.
 
 ## Reporting vulnerabilities in the running application or contracts
 
-Once `lafiya-web` and `lafiya-contracts` exist and ship code, report
+Once `lafiya-web` and `lafiya-contract` exist and ship code, report
 vulnerabilities in those systems in their own repositories, following their
 respective `SECURITY.md` files.
 

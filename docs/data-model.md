@@ -1,7 +1,7 @@
 # Lafiya Data Model
 
 This is the source of truth for every field Lafiya stores, where it lives,
-and who can see it. `lafiya-web`'s database schema and `lafiya-contracts`'s
+and who can see it. `lafiya-web`'s database schema and `lafiya-contract`'s
 on-chain structs must match this document — see the root README's
 [Shared Contracts](../README.md#shared-contracts-must-stay-in-sync-across-repos-once-they-exist)
 section.
@@ -58,5 +58,5 @@ hash is ever published.
 
 Any change to a field name, type, or enum value in this document is a
 **shared-contract change**: it must be reflected in `lafiya-web`'s schema
-and, if it touches the attestation record, in `lafiya-contracts`'s Rust
+and, if it touches the attestation record, in `lafiya-contract`'s Rust
 struct, in the same change set or a tracked follow-up in each repo.
