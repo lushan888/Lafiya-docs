@@ -11,7 +11,7 @@ section.
 This is the *only* data exposed on the unauthenticated public emergency page:
 
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | `name` | string | First name + last initial by default; full name is the patient's choice |
 | `age` | integer | Derived from date of birth; date of birth itself is not exposed |
 | `photo_url` | string (URL) | Optional; helps a responder confirm identity |
@@ -29,7 +29,7 @@ This is the *only* data exposed on the unauthenticated public emergency page:
 Everything in the emergency subset, plus:
 
 | Field | Type | Notes |
-|---|---|---|
+| --- | --- | --- |
 | `date_of_birth` | date | Used to derive public `age` only |
 | `full_medical_history` | text/document[] | Never exposed publicly |
 | `facility_visits` | record[] | Referral and visit history, if the patient chooses to log it |
@@ -40,7 +40,7 @@ Everything in the emergency subset, plus:
 
 Only this shape is ever written to the chain — never the fields above:
 
-```
+```text
 AttestationRecord {
   record_hash: BytesN<32>,   // hash of the emergency subset at attestation time
   attester: Address,         // the verifying health worker's Stellar address

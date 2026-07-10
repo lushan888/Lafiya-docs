@@ -124,7 +124,7 @@ Everything else (full history, documents, notes) stays private, behind authentic
 
 This repository (`lafiya-docs`) holds the concept note, data model, threat model, privacy design, and funding/DPG materials for the Lafiya project. The web app and smart contracts live in separate repos — see [Lafiya Organization](#lafiya-organization) below.
 
-```
+```text
 lafiya-docs/
 │
 ├── README.md                    ← This file: project overview and org-wide conventions
@@ -207,7 +207,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to propose changes, and [CODE_OF_
 This project lives under the `lafiya-xyz` GitHub organization. If a change here touches a shared contract (below), call it out so the matching repo can be updated.
 
 | Repo | Purpose | Priority |
-|------|---------|----------|
+| --- | --- | --- |
 | [`lafiya-web`](https://github.com/lafiya-xyz/lafiya-web) | Patient + responder web app (Next.js). Public emergency page, authed profile editor, QR generation. | **Build first** |
 | [`lafiya-contracts`](https://github.com/lafiya-xyz/lafiya-contracts) | Soroban smart contracts (Rust): attestation registry + attester allowlist. Testnet first. | **Build next** |
 | [`lafiya-docs`](https://github.com/lafiya-xyz/lafiya-docs) _(this repo)_ | Concept note, data model, threat model, privacy design, funding/DPG materials, references. | Start now (lightweight) |
@@ -226,7 +226,7 @@ This project lives under the `lafiya-xyz` GitHub organization. If a change here 
 
 ### Data Flow
 
-```
+```text
 lafiya-docs ──(data model, threat model, privacy design)──▶  lafiya-web
                                                                   │
                                                      patient profile + QR

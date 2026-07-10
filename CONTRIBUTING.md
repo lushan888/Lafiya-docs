@@ -19,9 +19,11 @@ changing them here without warning breaks other repos silently.
 1. Fork and branch from `main`.
 2. Follow the [docs style guide](docs/style-guide.md).
 3. Run the markdown linter locally if you have Node available:
+
    ```bash
    npx markdownlint-cli2 "**/*.md"
    ```
+
    CI runs the same check on every PR.
 4. Update [docs/README.md](docs/README.md)'s index if you add a new document.
 5. If your change affects a shared contract (data model, attestation schema,

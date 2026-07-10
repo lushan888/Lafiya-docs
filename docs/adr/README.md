@@ -3,7 +3,7 @@
 ADRs capture *why* a significant, hard-to-reverse decision was made — not
 what the code does. Use this format for a new ADR:
 
-```
+```markdown
 # ADR NNNN: Title
 
 ## Status
@@ -23,7 +23,7 @@ Number ADRs sequentially and never renumber or delete one — supersede it
 instead.
 
 | ADR | Title |
-|---|---|
+| --- | --- |
 | [0001](0001-why-stellar.md) | Why Stellar / Soroban |
 | [0002](0002-off-chain-data-on-chain-attestation.md) | Off-chain data, on-chain attestation only |
 | [0003](0003-attester-allowlist-governance.md) | Attester allowlist governed by committee |
