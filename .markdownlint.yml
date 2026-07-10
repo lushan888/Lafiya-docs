@@ -1,0 +1,4 @@
+default: true
+MD013: false # line length — docs use long prose lines
+MD033: false # allow inline HTML (used for the centered footer in README)
+MD041: false # first line doesn't have to be a top-level heading in every doc
