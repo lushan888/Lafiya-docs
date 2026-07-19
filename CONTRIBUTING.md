@@ -41,6 +41,24 @@ changing them here without warning breaks other repos silently.
 
 By participating, you agree to abide by the [Code of Conduct](CODE_OF_CONDUCT.md).
 
+## Secure-SDLC policy
+
+Applies to all changes, with stricter rules for security-sensitive ones.
+
+- **Mandatory code review for security-sensitive changes:** any PR touching
+  auth, data access (RLS / row policies), or contract logic (`lafiya-contract`)
+  requires review by a maintainer familiar with the
+  [threat model](docs/threat-model.md) before merge. Self-merge is not
+  permitted for these paths.
+- **Dependency scanning:** `npm audit` (npm) and `cargo audit` (crates.io)
+  run in CI on every PR. New dependencies must pass the
+  [third-party dependency risk assessment](docs/dependency-risk.md) — no
+  unvetted dependency is merged.
+- **Secrets management:** no secrets (keys, mnemonics, `.env` values) may be
+  committed. Scan for accidental secrets in CI; anything pushed to git
+  history is rotated immediately and the commit purged. Local `.env.example`
+  files contain placeholders only.
+
 ## Reporting a security or privacy issue
 
 Please don't open a public issue for a security or privacy concern — see

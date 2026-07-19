@@ -33,3 +33,10 @@ respective `SECURITY.md` files.
 
 Lafiya is pre-alpha, Stellar **testnet** only. No production deployment
 exists yet, so there is no supported-version matrix to publish.
+
+## Bug bounty program
+
+Once `lafiya-web` and `lafiya-contract` ship code, a formal
+[bug bounty program](docs/bug-bounty.md) defines scope, severity tiers, and
+the disclosure timeline for the deployed system. Design-level reports to this
+repo remain welcome per "What to report here" above.
