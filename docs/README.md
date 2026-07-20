@@ -9,6 +9,7 @@ This directory is the single source of truth for Lafiya's design. Start here.
 | [threat-model.md](threat-model.md) | Assets, actors, trust boundaries, STRIDE analysis, mitigations |
 | [privacy-design.md](privacy-design.md) | Data minimization, consent, NDPA 2023 mapping, on-chain/off-chain boundary |
 | [data-retention-policy.md](data-retention-policy.md) | Retention periods, deletion requests, backup handling |
+| [analytics-spec.md](analytics-spec.md) | Scan-event schema, privacy boundaries, and retention rules |
 | [funding-and-dpg.md](funding-and-dpg.md) | SCF application notes and Digital Public Goods Standard checklist |
 | [roadmap.md](roadmap.md) | Milestone-by-milestone detail behind the README roadmap |
 | [personas.md](personas.md) | The people Lafiya is designed around |

@@ -20,32 +20,12 @@ Once `lafiya-web` and `lafiya-contract` exist and ship code, report vulnerabilit
 
 ## Supported versions
 
-Lafiya is pre-alpha, Stellar **testnet** only. No production deployment exists yet, so there is no supported-version matrix to publish.
+Lafiya is pre-alpha, Stellar **testnet** only. No production deployment
+exists yet, so there is no supported-version matrix to publish.
 
-## Researcher Acknowledgement Policy
+## Bug bounty program
 
-### Security Hall of Fame
-
-We value and recognize the contributions of security researchers who help strengthen Lafiya's security posture. A permanent `Security Hall of Fame` section will be maintained in this document to honor researchers who submit valid reports in good faith.
-
-### Conditions for Acknowledgment
-
-To qualify for recognition in the Security Hall of Fame, a report must meet the following criteria:
-
-- The report identifies a valid security issue or design flaw in scope of this repository or the broader Lafiya project
-- The report includes a clear description and, where applicable, a proof-of-concept demonstrating the issue
-- The report is submitted privately via designated channels (GitHub Security Advisory for this repository)
-- The researcher adheres to responsible disclosure practices and does not publicly disclose the issue before a patch or mitigation is deployed
-- The researcher's disclosure does not violate any laws or cause harm to Lafiya users or systems
-
-Acknowledgment is added after the report has been validated and the issue has been remediated, mitigated, or formally accepted by the maintainers.
-
-### Monetary Reward Differentiation
-
-Inclusion in the Security Hall of Fame is credential-based recognition and is separate from financial compensation. Any monetary reward decisions are handled through the official bug bounty tracker, `Lafiya Bug Bounty Campaign #5`.
-
-## Security Hall of Fame
-
-_We look forward to acknowledging our first good-faith security researchers here!_
-
-- **[Slot Open]** — Awaiting the first verified responsible disclosure.
+Once `lafiya-web` and `lafiya-contract` ship code, a formal
+[bug bounty program](docs/bug-bounty.md) defines scope, severity tiers, and
+the disclosure timeline for the deployed system. Design-level reports to this
+repo remain welcome per "What to report here" above.

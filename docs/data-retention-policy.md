@@ -7,6 +7,7 @@
 | Active patient profile | Retained while the account is active | Deleted on verified deletion request, subject to legal hold requirements under NDPA 2023 |
 | Inactive account | Flagged after 24 months of no login; patient notified before deletion | Deleted after notice period unless the patient re-engages |
 | Audit/access logs | Retained 12 months for security investigation purposes | Rotated out automatically |
+| Scan-event analytics | Retained 12 months for security and trend analysis | Automatically deleted or aggregated; see [analytics-spec.md](analytics-spec.md) |
 
 ## On-chain data (Soroban)
 
