@@ -45,6 +45,13 @@
 | **Denial of service** | Attacker floods the public page endpoint | Standard rate limiting at `lafiya-web`'s edge; QR pages are static/cacheable by design |
 | **Elevation of privilege** | CHW account is used to add itself to the attester allowlist | Allowlist changes require governance/committee action, not CHW-level credentials |
 
+## Audit-readiness
+
+Every entry above is tracked in the
+[audit-readiness checklist](audit-readiness-checklist.md) — each asset and
+STRIDE threat is marked mitigated-with-evidence or open-with-owner-and-date
+for funder/auditor consumption.
+
 ## Residual risk
 
 - **Coerced or bribed attester**: an allowlisted health worker who is bribed
