@@ -59,7 +59,7 @@ cut without the others collapsing.
 Tracked from M0 onward (see [roadmap.md](roadmap.md)):
 
 - Verified emergency cards created (registration + attestation both complete)
-- Scan events on public emergency pages (a proxy for real-world reach)
+- Scan events on public emergency pages (a proxy for real-world reach — see [analytics-spec.md](analytics-spec.md))
 - CHW registrations paid out, and time from registration to payout
 - Disputed or corrected attestations (a proxy for verification quality)
 

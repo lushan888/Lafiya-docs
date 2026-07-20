@@ -66,3 +66,19 @@ verified indicator.
 - Mainnet deployment of `lafiya-contract`
 - Public, on-chain-traceable funding pool for CHW incentives
 - DPG Standard registration (see [funding-and-dpg.md](funding-and-dpg.md))
+
+## Security testing cadence
+
+Ongoing penetration testing tied to the roadmap, complementing the one-time
+pre-mainnet audit (see the [audit-readiness checklist](docs/audit-readiness-checklist.md)):
+
+- **Scope per milestone:** M1 (attestation registry + allowlist logic),
+  M3 (pilot field surface), M4 (full mainnet attack surface).
+- **Cadence:** a dedicated pen-test immediately before M3 (pilot) and before
+  M4 (mainnet); annually post-mainnet, or on any shared-contract change to
+  the [data model](docs/data-model.md) or attestation schema.
+- **Vendor-selection criteria:** demonstrated Stellar/Soroban and health-data
+  (PHI) engagement experience; able to sign a data-handling agreement;
+  delivers a remediated-report cycle, not a one-shot scan.
+- See also the [bug bounty program](docs/bug-bounty.md) for continuous
+  researcher-driven disclosure.
